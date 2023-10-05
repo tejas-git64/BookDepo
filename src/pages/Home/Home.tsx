@@ -16,8 +16,8 @@ export default function Home() {
 	const options = {
 		method: "GET",
 		headers: {
-			"X-RapidAPI-Key": "your-rapid-api-key",
-			"X-RapidAPI-Host": "your-rapid-api-host",
+			"X-RapidAPI-Key": import.meta.env.VITE_API_KEY,
+			"X-RapidAPI-Host": import.meta.env.VITE_API_HOST,
 		},
 	};
 
@@ -66,7 +66,7 @@ export default function Home() {
 					</p>
 					<div
 						className={`relative mt-10 w-[85%] lg:w-[900px] sm:bg-[url(https://www.reshot.com/preview-assets/illustrations/UVBH2DP357/education-books-UVBH2DP357-w1600.jpg)] bg-right bg-contain bg-no-repeat h-40 rounded-3xl flex flex-col justify-center items-center bg-amber-300 sm:bg-white mx-auto shadow-lg`}>
-						<h2 className='text-2xl md:text-3xl font-bold md:mb-2 text-black'>
+						<h2 className='text-xl md:text-3xl font-bold md:mb-2 text-black'>
 							Search thousands of books!
 						</h2>
 						<SearchBar setQuery={setQuery} searchFromQuery={searchFromQuery} />

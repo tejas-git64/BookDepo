@@ -1,4 +1,4 @@
-export default function Author() {
+export default function Authors() {
 	return (
 		<>
 			<div></div>

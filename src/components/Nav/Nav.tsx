@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import cart from "../../assets/images/icons8-cart-32.png";
 import logo from "../../assets/images/icons8-books-48.png";
+import { useContext } from "react";
+import { AppContext } from "../../App";
 
 export default function Nav() {
+	const NavContext = useContext(AppContext);
+
 	return (
 		<>
 			<nav className='w-full h-20 flex items-center justify-between px-4 sm:px-10 py-2 xl:justify-around'>
@@ -38,7 +42,7 @@ export default function Nav() {
 							className='text-black relative hover:text-amber-700 font-bold text-lg'>
 							<img src={cart} alt='cart' className='w-9 -mt-1' />
 							<p className='w-4 text-[8px] absolute bg-black px-[2px] top-0 -right-2 -mt-2 rounded-full text-white'>
-								10
+								{NavContext?.cart.length}
 							</p>
 						</Link>
 					</li>

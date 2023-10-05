@@ -27,6 +27,7 @@ export type TitleById = {
 	rating: number;
 	pages: number;
 	published_date: string;
+	synopsis: string;
 };
 
 export type TitleSearch = {
@@ -34,20 +35,29 @@ export type TitleSearch = {
 	name: string;
 	cover: string;
 	url: string;
-	authors: string[];
+	authors: [string];
 	rating: number;
 	created_editions: number;
 	year: number;
 };
 
 export type ResultType = {
+	cart: Genre[] | [];
+	setCart: React.Dispatch<React.SetStateAction<[] | Genre[]>>;
 	searchResults: TitleSearch[] | null;
 	setSearchResults: React.Dispatch<React.SetStateAction<TitleSearch[] | null>>;
+	addBookToCart: (
+		e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+		book_id: number,
+		cover: string,
+		name: string,
+		url: string
+	) => void;
 };
 
-export type Genres = {
+export type Genre = {
 	book_id: number;
 	name: string;
 	cover: string;
 	url: string;
-}[];
+};
