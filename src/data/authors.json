@@ -1,0 +1,464 @@
+[
+	{
+		"author_name": "John Smith",
+		"birthdate": "1980-03-15",
+		"author_image_url": "https://example.com/john_smith.jpg",
+		"writing_category": "Mystery",
+		"book_count": 10,
+		"popular_books": [
+			{
+				"book_title": "The Mysterious Case",
+				"book_image_url": "https://example.com/mysterious_case.jpg",
+				"category": "Mystery",
+				"language": "English"
+			},
+			{
+				"book_title": "Secrets Unveiled",
+				"book_image_url": "https://example.com/secrets_unveiled.jpg",
+				"category": "Thriller",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "Emily Johnson",
+		"birthdate": "1995-08-22",
+		"author_image_url": "https://example.com/emily_johnson.jpg",
+		"writing_category": "Romance",
+		"book_count": 8,
+		"popular_books": [
+			{
+				"book_title": "Love in Paris",
+				"book_image_url": "https://example.com/love_in_paris.jpg",
+				"category": "Romance",
+				"language": "English"
+			},
+			{
+				"book_title": "A Summer Affair",
+				"book_image_url": "https://example.com/summer_affair.jpg",
+				"category": "Romance",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "David Lee",
+		"birthdate": "1972-11-10",
+		"author_image_url": "https://example.com/david_lee.jpg",
+		"writing_category": "Science Fiction",
+		"book_count": 12,
+		"popular_books": [
+			{
+				"book_title": "The Galactic Odyssey",
+				"book_image_url": "https://example.com/galactic_odyssey.jpg",
+				"category": "Science Fiction",
+				"language": "English"
+			},
+			{
+				"book_title": "Time Warp Chronicles",
+				"book_image_url": "https://example.com/time_warp_chronicles.jpg",
+				"category": "Science Fiction",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "Sarah Adams",
+		"birthdate": "1987-04-05",
+		"author_image_url": "https://example.com/sarah_adams.jpg",
+		"writing_category": "Fantasy",
+		"book_count": 7,
+		"popular_books": [
+			{
+				"book_title": "The Enchanted Kingdom",
+				"book_image_url": "https://example.com/enchanted_kingdom.jpg",
+				"category": "Fantasy",
+				"language": "English"
+			},
+			{
+				"book_title": "Quest for the Lost Crystal",
+				"book_image_url": "https://example.com/lost_crystal.jpg",
+				"category": "Fantasy",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "Michael Brown",
+		"birthdate": "1988-12-18",
+		"author_image_url": "https://example.com/michael_brown.jpg",
+		"writing_category": "Thriller",
+		"book_count": 9,
+		"popular_books": [
+			{
+				"book_title": "Deadly Pursuit",
+				"book_image_url": "https://example.com/deadly_pursuit.jpg",
+				"category": "Thriller",
+				"language": "English"
+			},
+			{
+				"book_title": "Twisted Lies",
+				"book_image_url": "https://example.com/twisted_lies.jpg",
+				"category": "Thriller",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "Lisa Green",
+		"birthdate": "1990-06-25",
+		"author_image_url": "https://example.com/lisa_green.jpg",
+		"writing_category": "Mystery",
+		"book_count": 11,
+		"popular_books": [
+			{
+				"book_title": "Murder at Midnight",
+				"book_image_url": "https://example.com/murder_at_midnight.jpg",
+				"category": "Mystery",
+				"language": "English"
+			},
+			{
+				"book_title": "The Puzzle Solver",
+				"book_image_url": "https://example.com/puzzle_solver.jpg",
+				"category": "Mystery",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "Robert Clark",
+		"birthdate": "1975-09-30",
+		"author_image_url": "https://example.com/robert_clark.jpg",
+		"writing_category": "Historical Fiction",
+		"book_count": 6,
+		"popular_books": [
+			{
+				"book_title": "The Forgotten Era",
+				"book_image_url": "https://example.com/forgotten_era.jpg",
+				"category": "Historical Fiction",
+				"language": "English"
+			},
+			{
+				"book_title": "In the Shadow of Kings",
+				"book_image_url": "https://example.com/shadow_of_kings.jpg",
+				"category": "Historical Fiction",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "Jessica Miller",
+		"birthdate": "1983-02-14",
+		"author_image_url": "https://example.com/jessica_miller.jpg",
+		"writing_category": "Romance",
+		"book_count": 10,
+		"popular_books": [
+			{
+				"book_title": "Love Beyond Borders",
+				"book_image_url": "https://example.com/beyond_borders.jpg",
+				"category": "Romance",
+				"language": "English"
+			},
+			{
+				"book_title": "A Heart's Journey",
+				"book_image_url": "https://example.com/hearts_journey.jpg",
+				"category": "Romance",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "Daniel White",
+		"birthdate": "1981-07-12",
+		"author_image_url": "https://example.com/daniel_white.jpg",
+		"writing_category": "Science Fiction",
+		"book_count": 9,
+		"popular_books": [
+			{
+				"book_title": "Space Explorers",
+				"book_image_url": "https://example.com/space_explorers.jpg",
+				"category": "Science Fiction",
+				"language": "English"
+			},
+			{
+				"book_title": "The Alien Encounter",
+				"book_image_url": "https://example.com/alien_encounter.jpg",
+				"category": "Science Fiction",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "Hannah Adams",
+		"birthdate": "1992-03-08",
+		"author_image_url": "https://example.com/hannah_adams.jpg",
+		"writing_category": "Fantasy",
+		"book_count": 8,
+		"popular_books": [
+			{
+				"book_title": "The Magical Quest",
+				"book_image_url": "https://example.com/magical_quest.jpg",
+				"category": "Fantasy",
+				"language": "English"
+			},
+			{
+				"book_title": "Legends of the Realm",
+				"book_image_url": "https://example.com/legends_realm.jpg",
+				"category": "Fantasy",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "Samuel Adams",
+		"birthdate": "1978-10-19",
+		"author_image_url": "https://example.com/samuel_adams.jpg",
+		"writing_category": "Thriller",
+		"book_count": 7,
+		"popular_books": [
+			{
+				"book_title": "The Deadly Plot",
+				"book_image_url": "https://example.com/deadly_plot.jpg",
+				"category": "Thriller",
+				"language": "English"
+			},
+			{
+				"book_title": "Conspiracy Code",
+				"book_image_url": "https://example.com/conspiracy_code.jpg",
+				"category": "Thriller",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "Megan Turner",
+		"birthdate": "1993-05-17",
+		"author_image_url": "https://example.com/megan_turner.jpg",
+		"writing_category": "Mystery",
+		"book_count": 11,
+		"popular_books": [
+			{
+				"book_title": "The Enigma Files",
+				"book_image_url": "https://example.com/enigma_files.jpg",
+				"category": "Mystery",
+				"language": "English"
+			},
+			{
+				"book_title": "Vanishing Act",
+				"book_image_url": "https://example.com/vanishing_act.jpg",
+				"category": "Mystery",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "William Brown",
+		"birthdate": "1986-12-03",
+		"author_image_url": "https://example.com/william_brown.jpg",
+		"writing_category": "Historical Fiction",
+		"book_count": 5,
+		"popular_books": [
+			{
+				"book_title": "The Time Traveler's Diary",
+				"book_image_url": "https://example.com/time_travelers_diary.jpg",
+				"category": "Historical Fiction",
+				"language": "English"
+			},
+			{
+				"book_title": "The Lost Chronicles",
+				"book_image_url": "https://example.com/lost_chronicles.jpg",
+				"category": "Historical Fiction",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "Olivia Davis",
+		"birthdate": "1991-08-28",
+		"author_image_url": "https://example.com/olivia_davis.jpg",
+		"writing_category": "Romance",
+		"book_count": 12,
+		"popular_books": [
+			{
+				"book_title": "Eternal Love",
+				"book_image_url": "https://example.com/eternal_love.jpg",
+				"category": "Romance",
+				"language": "English"
+			},
+			{
+				"book_title": "Whispers of the Heart",
+				"book_image_url": "https://example.com/whispers_heart.jpg",
+				"category": "Romance",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "Richard Johnson",
+		"birthdate": "1984-04-14",
+		"author_image_url": "https://example.com/richard_johnson.jpg",
+		"writing_category": "Science Fiction",
+		"book_count": 8,
+		"popular_books": [
+			{
+				"book_title": "The Space Odyssey",
+				"book_image_url": "https://example.com/space_odyssey.jpg",
+				"category": "Science Fiction",
+				"language": "English"
+			},
+			{
+				"book_title": "Future Frontiers",
+				"book_image_url": "https://example.com/future_frontiers.jpg",
+				"category": "Science Fiction",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "Ella Smith",
+		"birthdate": "1973-09-07",
+		"author_image_url": "https://example.com/ella_smith.jpg",
+		"writing_category": "Fantasy",
+		"book_count": 9,
+		"popular_books": [
+			{
+				"book_title": "The Realm of Magic",
+				"book_image_url": "https://example.com/realm_of_magic.jpg",
+				"category": "Fantasy",
+				"language": "English"
+			},
+			{
+				"book_title": "The Quest for Destiny",
+				"book_image_url": "https://example.com/quest_for_destiny.jpg",
+				"category": "Fantasy",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "Christopher Moore",
+		"birthdate": "1976-11-24",
+		"author_image_url": "https://example.com/christopher_moore.jpg",
+		"writing_category": "Thriller",
+		"book_count": 10,
+		"popular_books": [
+			{
+				"book_title": "Deadly Secrets",
+				"book_image_url": "https://example.com/deadly_secrets.jpg",
+				"category": "Thriller",
+				"language": "English"
+			},
+			{
+				"book_title": "The Silent Witness",
+				"book_image_url": "https://example.com/silent_witness.jpg",
+				"category": "Thriller",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "Sophia Adams",
+		"birthdate": "1994-02-02",
+		"author_image_url": "https://example.com/sophia_adams.jpg",
+		"writing_category": "Mystery",
+		"book_count": 6,
+		"popular_books": [
+			{
+				"book_title": "The Puzzle Master",
+				"book_image_url": "https://example.com/puzzle_master.jpg",
+				"category": "Mystery",
+				"language": "English"
+			},
+			{
+				"book_title": "The Vanishing Code",
+				"book_image_url": "https://example.com/vanishing_code.jpg",
+				"category": "Mystery",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "Joseph Wilson",
+		"birthdate": "1982-07-31",
+		"author_image_url": "https://example.com/joseph_wilson.jpg",
+		"writing_category": "Historical Fiction",
+		"book_count": 7,
+		"popular_books": [
+			{
+				"book_title": "The Forgotten Chronicles",
+				"book_image_url": "https://example.com/forgotten_chronicles.jpg",
+				"category": "Historical Fiction",
+				"language": "English"
+			},
+			{
+				"book_title": "The Time Traveler's Dilemma",
+				"book_image_url": "https://example.com/time_travelers_dilemma.jpg",
+				"category": "Historical Fiction",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "Isabella Garcia",
+		"birthdate": "1989-06-12",
+		"author_image_url": "https://example.com/isabella_garcia.jpg",
+		"writing_category": "Romance",
+		"book_count": 9,
+		"popular_books": [
+			{
+				"book_title": "Passion in Paradise",
+				"book_image_url": "https://example.com/passion_in_paradise.jpg",
+				"category": "Romance",
+				"language": "English"
+			},
+			{
+				"book_title": "Love's Eternal Flame",
+				"book_image_url": "https://example.com/eternal_flame.jpg",
+				"category": "Romance",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "James Turner",
+		"birthdate": "1979-03-19",
+		"author_image_url": "https://example.com/james_turner.jpg",
+		"writing_category": "Science Fiction",
+		"book_count": 8,
+		"popular_books": [
+			{
+				"book_title": "The Quantum Paradox",
+				"book_image_url": "https://example.com/quantum_paradox.jpg",
+				"category": "Science Fiction",
+				"language": "English"
+			},
+			{
+				"book_title": "Time Travelers' Code",
+				"book_image_url": "https://example.com/time_travelers_code.jpg",
+				"category": "Science Fiction",
+				"language": "English"
+			}
+		]
+	},
+	{
+		"author_name": "Emma Davis",
+		"birthdate": "1995-01-10",
+		"author_image_url": "https://example.com/emma_davis.jpg",
+		"writing_category": "Fantasy",
+		"book_count": 10,
+		"popular_books": [
+			{
+				"book_title": "The Magical Chronicles",
+				"book_image_url": "https://example.com/magical_chronicles.jpg",
+				"category": "Fantasy",
+				"language": "English"
+			},
+			{
+				"book_title": "Realm of Dragons",
+				"book_image_url": "https://example.com/realm_of_dragons.jpg",
+				"category": "Fantasy",
+				"language": "English"
+			}
+		]
+	}
+]
