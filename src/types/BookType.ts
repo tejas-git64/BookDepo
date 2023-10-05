@@ -53,6 +53,10 @@ export type ResultType = {
 		name: string,
 		url: string
 	) => void;
+	removeBook: (
+		e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+		book_id: number
+	) => void;
 };
 
 export type Genre = {

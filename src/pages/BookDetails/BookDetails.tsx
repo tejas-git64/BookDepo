@@ -44,7 +44,7 @@ export default function BookDetails() {
 	}
 
 	useEffect(() => {
-		getBookDetails();
+		// getBookDetails();
 	}, [bookid]);
 
 	return (

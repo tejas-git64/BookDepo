@@ -35,6 +35,16 @@ function App() {
 		]);
 	}
 
+	//Function to remove books to cart
+	function removeBook(
+		e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+		book_id: number
+	) {
+		e.stopPropagation();
+		e.preventDefault();
+		setCart(cart.filter((book) => book.book_id !== book_id));
+	}
+
 	return (
 		<>
 			<AppContext.Provider
@@ -44,6 +54,7 @@ function App() {
 					cart,
 					setCart,
 					addBookToCart,
+					removeBook,
 				}}>
 				<Router>
 					<Nav />

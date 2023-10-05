@@ -28,14 +28,16 @@ export default function Books() {
 	};
 
 	useEffect(() => {
-		getBooksByGenre();
+		// getBooksByGenre();
 	}, [genre]);
 
 	return (
 		<>
 			<div>
-				<div className='mt-4 w-[90%] mx-auto flex items-center justify-center md:justify-between px-4'>
-					<h2 className='hidden md:block font-semibold'>Books Count:</h2>
+				<div className='mt-4 w-[90%] lg:w-[950px] xl:w-[1280px] mx-auto flex items-center justify-center md:justify-between px-4'>
+					<h2 className='hidden md:block font-semibold'>
+						Books in store: {books.length}
+					</h2>
 					<div className='py-2 flex items-center px-0'>
 						<div className='px-2 mx-2 flex items-center justify-evenly'>
 							<p className='font-semibold text-sm mr-2'>Genre</p>
@@ -79,12 +81,12 @@ export default function Books() {
 						</div>
 					</div>
 				</div>
-				<div className='w-[90%] mx-auto p-4'>
+				<div className='w-[90%] lg:w-[950px] xl:w-[1280px] mx-auto py-4'>
 					<div
 						style={{
-							gridTemplateColumns: "repeat( auto-fill, minmax(150px, 1fr) )",
+							gridTemplateColumns: "repeat( auto-fit, minmax(140px, 1fr) )",
 						}}
-						className='w-full h-auto overflow-y-hidden rounded-3xl grid mx-auto p-1 gap-5'>
+						className='w-full h-auto overflow-y-hidden rounded-3xl grid mx-auto p-1 px-2 gap-5 md:gap-8'>
 						{books.length > 1 ? (
 							books.map((book) => (
 								<Book

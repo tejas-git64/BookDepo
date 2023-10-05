@@ -11,11 +11,11 @@ export default function Book({ book_id, cover, name, url }: Genre) {
 		<>
 			<Link
 				to={`/books/${book_id}`}
-				className='h-68 relative border-[1px] transition-all ease-out hover:shadow-2xl flex flex-col p-2 rounded-2xl flex-shrink-0'>
+				className='w-40 h-68 relative border-[1px] transition-all ease-out hover:shadow-2xl flex flex-col p-2 rounded-2xl flex-shrink-0 bg-white mx-auto'>
 				<img
 					src={cover}
 					alt='book-cover'
-					className='w-40 h-[200px] md:h-[210px] mx-auto rounded-xl'
+					className='w-36 md:w-40 h-[200px] md:h-[210px] mx-auto rounded-xl'
 				/>
 				<button
 					onClick={(e) =>
