@@ -3,60 +3,70 @@
 		"book_id": 62080187,
 		"name": "Never Lie",
 		"cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1661428846l/62080187._SY475_.jpg",
-		"url": "https://www.goodreads.com/book/show/62080187-never-lie"
+		"url": "https://www.goodreads.com/book/show/62080187-never-lie",
+		"price": 240
 	},
 	{
 		"book_id": 45299992,
 		"name": "If You Tell: a True Story of Murder, Family Secrets, and the Unbreakable Bond of Sisterhood",
 		"cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1556171767l/45299992._SY475_.jpg",
-		"url": "https://www.goodreads.com/book/show/45299992-if-you-tell"
+		"url": "https://www.goodreads.com/book/show/45299992-if-you-tell",
+		"price": 500
 	},
 	{
 		"book_id": 57795665,
 		"name": "The Locked Door",
 		"cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1618859577l/57795665._SY475_.jpg",
-		"url": "https://www.goodreads.com/book/show/57795665-the-locked-door"
+		"url": "https://www.goodreads.com/book/show/57795665-the-locked-door",
+		"price": 800
 	},
 	{
 		"book_id": 61313902,
 		"name": "Five Survive",
 		"cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1664370443l/61313902._SY475_.jpg",
-		"url": "https://www.goodreads.com/book/show/61313902-five-survive"
+		"url": "https://www.goodreads.com/book/show/61313902-five-survive",
+		"price": 220
 	},
 	{
 		"book_id": 60177373,
 		"name": "Fairy Tale",
 		"cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1647789287l/60177373.jpg",
-		"url": "https://www.goodreads.com/book/show/60177373-fairy-tale"
+		"url": "https://www.goodreads.com/book/show/60177373-fairy-tale",
+		"price": 400
 	},
 	{
 		"book_id": 58724923,
 		"name": "Hidden Pictures",
 		"cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1635260162l/58724923.jpg",
-		"url": "https://www.goodreads.com/book/show/58724923-hidden-pictures"
+		"url": "https://www.goodreads.com/book/show/58724923-hidden-pictures",
+		"price": 1400
 	},
 	{
 		"book_id": 58909880,
 		"name": "The House Across the Lake",
 		"cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1639618949l/58909880.jpg",
-		"url": "https://www.goodreads.com/book/show/58909880-the-house-across-the-lake"
+		"url": "https://www.goodreads.com/book/show/58909880-the-house-across-the-lake",
+		"price": 270
 	},
 	{
 		"book_id": 52476830,
 		"name": "The Push",
 		"cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1609854219l/52476830._SY475_.jpg",
-		"url": "https://www.goodreads.com/book/show/52476830-the-push"
+		"url": "https://www.goodreads.com/book/show/52476830-the-push",
+		"price": 1130
 	},
 	{
 		"book_id": 59808050,
 		"name": "Daisy Darker",
 		"cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1639604124l/59808050.jpg",
-		"url": "https://www.goodreads.com/book/show/59808050-daisy-darker"
+		"url": "https://www.goodreads.com/book/show/59808050-daisy-darker",
+		"price": 360
 	},
 	{
 		"book_id": 54197718,
 		"name": "One By One",
 		"cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1592705582l/54197718._SY475_.jpg",
-		"url": "https://www.goodreads.com/book/show/54197718-one-by-one"
+		"url": "https://www.goodreads.com/book/show/54197718-one-by-one",
+		"price": 710
 	}
 ]

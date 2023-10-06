@@ -4,7 +4,7 @@ import addToCart from "../../assets/images/icons8-add-to-cart-48.png";
 import { useContext } from "react";
 import { AppContext } from "../../App";
 
-export default function Book({ book_id, cover, name, url }: Genre) {
+export default function Book({ book_id, cover, name, url, price }: Genre) {
 	const BookContext = useContext(AppContext);
 
 	return (
@@ -19,7 +19,7 @@ export default function Book({ book_id, cover, name, url }: Genre) {
 				/>
 				<button
 					onClick={(e) =>
-						BookContext?.addBookToCart(e, book_id, cover, name, url)
+						BookContext?.addBookToCart(e, book_id, cover, name, url, price)
 					}
 					className='p-1 w-auto absolute top-4 right-[13%] md:top-4 outline-none'>
 					<img src={addToCart} alt='add to cat' className='w-6' />

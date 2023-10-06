@@ -13,19 +13,13 @@ export default function Home() {
 
 	//HAPI(from Rapid API) BooksAPI url and options
 	const books = `https://hapi-books.p.rapidapi.com/search/${query}`;
-	const options = {
-		method: "GET",
-		headers: {
-			"X-RapidAPI-Key": import.meta.env.VITE_API_KEY,
-			"X-RapidAPI-Host": import.meta.env.VITE_API_HOST,
-		},
-	};
 
 	//Method to fetch from query
 	const searchFromQuery = async () => {
 		try {
-			const response = await fetch(books, options);
-			const result = await response.text();
+			const response = await fetch(books, HomeContext?.options);
+			const readableStream = await response.text();
+			const result = JSON.parse(readableStream);
 			setQuery(result);
 		} catch (error) {
 			console.error(error);
@@ -40,7 +34,7 @@ export default function Home() {
 		const month = date.getMonth();
 		const featuredurl = `https://hapi-books.p.rapidapi.com/month/${year}/${month}`;
 		try {
-			const response = await fetch(featuredurl, options);
+			const response = await fetch(featuredurl, HomeContext?.options);
 			const result = await response.json();
 			setFeatured(result);
 			console.log(result);

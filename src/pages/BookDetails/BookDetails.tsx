@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { TitleById } from "../../types/BookType";
@@ -24,17 +25,12 @@ export default function BookDetails() {
 	const DetailContext = useContext(AppContext);
 
 	const bookurl = `https://hapi-books.p.rapidapi.com/book/${String(bookid)}`;
-	const options = {
-		method: "GET",
-		headers: {
-			"X-RapidAPI-Key": import.meta.env.VITE_API_KEY,
-			"X-RapidAPI-Host": import.meta.env.VITE_API_HOST,
-		},
-	};
+
 	//Getting BookDetails from bookid
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	async function getBookDetails() {
 		try {
-			const response = await fetch(bookurl, options);
+			const response = await fetch(bookurl, DetailContext?.options);
 			const result = await response.json();
 			setBookDetails(result);
 			console.log(result);
@@ -43,9 +39,9 @@ export default function BookDetails() {
 		}
 	}
 
-	useEffect(() => {
-		// getBookDetails();
-	}, [bookid]);
+	// useEffect(() => {
+	// 	getBookDetails();
+	// }, [bookid]);
 
 	return (
 		<>
@@ -82,7 +78,8 @@ export default function BookDetails() {
 								bookDetails?.book_id || 0,
 								bookDetails?.cover || "",
 								bookDetails?.name || "",
-								bookDetails?.url || ""
+								bookDetails?.url || "",
+								100
 							)
 						}
 						className='mx-auto lg:mx-0 my-6 flex bg-black border-[1px] border-black'>

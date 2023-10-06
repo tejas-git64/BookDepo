@@ -36,12 +36,12 @@ export default function Nav() {
 							Authors
 						</Link>
 					</li>
-					<li className='px-4 hidden md:block'>
+					<li className='mx-4 hidden md:block relative'>
 						<Link
 							to='/cart'
-							className='text-black relative hover:text-amber-700 font-bold text-lg'>
-							<img src={cart} alt='cart' className='w-9 -mt-1' />
-							<p className='w-4 text-[8px] absolute bg-black px-[2px] top-0 -right-2 -mt-2 rounded-full text-white'>
+							className='text-black hover:text-amber-700 font-bold text-lg'>
+							<img src={cart} alt='cart' className='w-19 -mt-1' />
+							<p className='bg-black text-white absolute px-[3px] text-xs rounded-full -top-1 -right-1'>
 								{NavContext?.cart.length}
 							</p>
 						</Link>

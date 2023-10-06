@@ -1,27 +1,25 @@
-import { useEffect, useState } from "react";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { useContext, useEffect, useState } from "react";
 import bookData from "../../data/books.json";
 import { Genre } from "../../types/BookType";
-import Book from "../Book/Book";
+import Book from "../../components/Book/Book";
+import { AppContext } from "../../App";
 
 export default function Books() {
-	const [genre, setGenre] = useState("");
+	const [genre, setGenre] = useState("fantasy");
 	const [books, setBooks] = useState<Genre[] | []>(bookData);
-
-	const genreurl = `https://hapi-books.p.rapidapi.com/week/${genre}/10`;
-	const options = {
-		method: "GET",
-		headers: {
-			"X-RapidAPI-Key": import.meta.env.VITE_API_KEY,
-			"X-RapidAPI-Host": import.meta.env.VITE_API_HOST,
-		},
-	};
+	const BookContext = useContext(AppContext);
+	const genreurl = `https://hapi-books.p.rapidapi.com/week/${genre}/30`;
 
 	//Function to get by genre on selecting
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const getBooksByGenre = async () => {
 		try {
-			const response = await fetch(genreurl, options);
-			const result = await response.json();
+			const response = await fetch(genreurl, BookContext?.options);
+			const readableStream = await response.text();
+			const result = JSON.parse(readableStream);
 			setBooks(result);
+			// console.log(result);
 		} catch (error) {
 			console.error(error);
 		}
@@ -46,9 +44,9 @@ export default function Books() {
 								id='genre'
 								onChange={(e) => setGenre(e.target.value)}
 								className='w-44 md:w-32 text-[14px] h-8 pb-[0.5px] border-[1px] border-neutral-300 text-neutral-900 outline-none'>
-								<option value='Fantasy'>Fantasy</option>
-								<option value='Poetry'>Poetry</option>
-								<option value='Horror'>Horror</option>
+								<option value='fantasy'>Fantasy</option>
+								<option value='poetry'>Poetry</option>
+								<option value='horror'>Horror</option>
 								<option value='Mystery & Thriller'>Mystery & Thriller</option>
 								<option value='Historical Fiction'>Historical Fiction</option>
 								<option value='Science Fiction'>Science Fiction</option>
@@ -95,10 +93,15 @@ export default function Books() {
 									name={book.name}
 									cover={book.cover}
 									url={book.url}
+									price={book.price ? book.price : 100}
 								/>
 							))
 						) : (
-							<></>
+							<div className="'w-full h-[80vh] overflow-y-hidden rounded-3xl bg-slate-100 grid place-items-center">
+								<p className='text-center text-3xl font-bold'>
+									Hmm...There seems to be no books 🤷
+								</p>
+							</div>
 						)}
 					</div>
 				</div>

@@ -8,11 +8,21 @@ import { createContext, useState } from "react";
 import { Genre, ResultType, TitleSearch } from "./types/BookType";
 import BookDetails from "./pages/BookDetails/BookDetails";
 import Authors from "./pages/Authors/Authors";
+import MobileNav from "./components/MobileNav/MobileNav";
 
 export const AppContext = createContext<ResultType | null>(null);
 function App() {
 	const [searchResults, setSearchResults] = useState<TitleSearch[] | null>([]);
 	const [cart, setCart] = useState<Genre[] | []>([]);
+
+	//Options with headers for using api
+	const options = {
+		method: "GET",
+		headers: {
+			"X-RapidAPI-Key": import.meta.env.VITE_API_KEY,
+			"X-RapidAPI-Host": import.meta.env.VITE_API_HOST,
+		},
+	};
 
 	//Function to add books to cart
 	function addBookToCart(
@@ -20,7 +30,8 @@ function App() {
 		book_id: number,
 		cover: string,
 		name: string,
-		url: string
+		url: string,
+		price: number
 	) {
 		e.stopPropagation();
 		e.preventDefault();
@@ -30,6 +41,7 @@ function App() {
 				cover: cover,
 				name: name,
 				url: url,
+				price: price,
 			},
 			...prev,
 		]);
@@ -55,6 +67,7 @@ function App() {
 					setCart,
 					addBookToCart,
 					removeBook,
+					options,
 				}}>
 				<Router>
 					<Nav />
@@ -66,6 +79,7 @@ function App() {
 						<Route path='/books/:bookid' element={<BookDetails />} />
 						<Route path='/cart' element={<Cart />} />
 					</Routes>
+					<MobileNav />
 				</Router>
 			</AppContext.Provider>
 		</>

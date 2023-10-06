@@ -51,12 +51,20 @@ export type ResultType = {
 		book_id: number,
 		cover: string,
 		name: string,
-		url: string
+		url: string,
+		price: number
 	) => void;
 	removeBook: (
 		e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
 		book_id: number
 	) => void;
+	options: {
+		method: string;
+		headers: {
+			"X-RapidAPI-Key": string;
+			"X-RapidAPI-Host": string;
+		};
+	};
 };
 
 export type Genre = {
@@ -64,4 +72,5 @@ export type Genre = {
 	name: string;
 	cover: string;
 	url: string;
+	price: number;
 };
