@@ -4,7 +4,7 @@ import Home from "./pages/Home/Home";
 import Books from "./pages/Books/Books";
 import Cart from "./pages/Cart/Cart";
 import Nav from "./components/Nav/Nav";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { Genre, ResultType, TitleSearch } from "./types/BookType";
 import BookDetails from "./pages/BookDetails/BookDetails";
 import Authors from "./pages/Authors/Authors";
@@ -14,7 +14,16 @@ import Login from "./components/Login/Login";
 export const AppContext = createContext<ResultType | null>(null);
 function App() {
 	const [searchResults, setSearchResults] = useState<TitleSearch[] | null>([]);
-	const [cart, setCart] = useState<Genre[] | []>([]);
+	const [cart, setCart] = useState<Genre[] | []>(() => {
+		const savedState = sessionStorage.getItem("cart");
+		if (savedState) {
+			// If savedState exists, parse it and return it
+			return JSON.parse(savedState);
+		} else {
+			// If savedState doesn't exist, return a default value
+			return [];
+		}
+	});
 	const [loggedIn, setLoggedIn] = useState(false);
 	const [showLogin, setShowLogin] = useState(false);
 	const [fullname, setFullname] = useState("");
@@ -60,6 +69,10 @@ function App() {
 		e.preventDefault();
 		setCart(cart.filter((book) => book.book_id !== book_id));
 	}
+
+	useEffect(() => {
+		sessionStorage.setItem("cart", JSON.stringify(cart));
+	}, [cart]);
 
 	return (
 		<>
