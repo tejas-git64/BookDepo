@@ -39,9 +39,9 @@ export default function BookDetails() {
 		}
 	}
 
-	// useEffect(() => {
-	// 	getBookDetails();
-	// }, [bookid]);
+	 useEffect(() => {
+	 	getBookDetails();
+	}, [bookid]);
 
 	return (
 		<>
