@@ -31,7 +31,8 @@ export default function BookDetails() {
 	async function getBookDetails() {
 		try {
 			const response = await fetch(bookurl, DetailContext?.options);
-			const result = await response.json();
+			const readableStream = await response.text();
+			const result = JSON.parse(readableStream);
 			setBookDetails(result);
 			console.log(result);
 		} catch (error) {
@@ -39,9 +40,9 @@ export default function BookDetails() {
 		}
 	}
 
-	// useEffect(() => {
-	// 	getBookDetails();
-	// }, [bookid]);
+	useEffect(() => {
+		getBookDetails();
+	}, [bookid]);
 
 	return (
 		<>
