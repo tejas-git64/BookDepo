@@ -9,11 +9,15 @@ import { Genre, ResultType, TitleSearch } from "./types/BookType";
 import BookDetails from "./pages/BookDetails/BookDetails";
 import Authors from "./pages/Authors/Authors";
 import MobileNav from "./components/MobileNav/MobileNav";
+import Login from "./components/Login/Login";
 
 export const AppContext = createContext<ResultType | null>(null);
 function App() {
 	const [searchResults, setSearchResults] = useState<TitleSearch[] | null>([]);
 	const [cart, setCart] = useState<Genre[] | []>([]);
+	const [loggedIn, setLoggedIn] = useState(false);
+	const [showLogin, setShowLogin] = useState(false);
+	const [fullname, setFullname] = useState("");
 
 	//Options with headers for using api
 	const options = {
@@ -68,6 +72,12 @@ function App() {
 					addBookToCart,
 					removeBook,
 					options,
+					loggedIn,
+					setLoggedIn,
+					showLogin,
+					setShowLogin,
+					fullname,
+					setFullname,
 				}}>
 				<Router>
 					<Nav />
@@ -79,6 +89,7 @@ function App() {
 						<Route path='/books/:bookid' element={<BookDetails />} />
 						<Route path='/cart' element={<Cart />} />
 					</Routes>
+					<Login />
 					<MobileNav />
 				</Router>
 			</AppContext.Provider>

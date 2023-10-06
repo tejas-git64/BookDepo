@@ -1,6 +1,6 @@
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Results from "../../components/Results/Results";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../App";
 import Featured from "../../components/Featured/Featured";
 import { FeaturedType } from "../../types/BookType";
@@ -20,7 +20,7 @@ export default function Home() {
 			const response = await fetch(books, HomeContext?.options);
 			const readableStream = await response.text();
 			const result = JSON.parse(readableStream);
-			setQuery(result);
+			HomeContext?.setSearchResults(result);
 		} catch (error) {
 			console.error(error);
 		}
@@ -35,18 +35,18 @@ export default function Home() {
 		const featuredurl = `https://hapi-books.p.rapidapi.com/month/${year}/${month}`;
 		try {
 			const response = await fetch(featuredurl, HomeContext?.options);
-			const result = await response.json();
+			const readableStream = await response.text();
+			const result = JSON.parse(readableStream);
 			setFeatured(result);
-			console.log(result);
 		} catch (error) {
 			console.error(error);
 		}
 	};
 
 	//Use only if you have subscribed to api
-	// useEffect(() => {
-	// 	getFeaturedBooks();
-	// }, []);
+	useEffect(() => {
+		getFeaturedBooks();
+	}, []);
 
 	return (
 		<>
@@ -96,17 +96,25 @@ export default function Home() {
 						Featured Books
 					</h2>
 					<ul className='my-4 p-2 flex overflow-x-scroll overflow-y-hidden resize-none px-0'>
-						{featured.map((fbook) => (
-							<Featured
-								key={fbook.book_id}
-								book_id={fbook.book_id}
-								position={fbook.position}
-								name={fbook.name}
-								cover={fbook.cover}
-								rating={fbook.rating}
-								url={fbook.url}
-							/>
-						))}
+						{featured.length >= 5 ? (
+							featured.map((fbook) => (
+								<Featured
+									key={fbook.book_id}
+									book_id={fbook.book_id}
+									position={fbook.position}
+									name={fbook.name}
+									cover={fbook.cover}
+									rating={fbook.rating}
+									url={fbook.url}
+								/>
+							))
+						) : (
+							<div className='w-full h-[30vh] rounded-3xl bg-neutral-50 grid place-items-center'>
+								<p className='font-semibold text-2xl'>
+									Uh Oh...could'nt get any books 📚
+								</p>
+							</div>
+						)}
 					</ul>
 				</div>
 			</div>

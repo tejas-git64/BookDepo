@@ -8,7 +8,7 @@ export default function CartBook({ book_id, cover, name }: Genre) {
 
 	return (
 		<>
-			<div className='border-b-2 w-full h-28 flex items-center justify-between px-6 py-[7px]'>
+			<div className='border-b-2 w-full h-28 flex items-center justify-between px-2 sm:px-6 py-[7px]'>
 				<img src={cover} alt='book-cover' className='w-16 h-20 flex-shrink-0' />
 				<h2 className='w-full h-full text-sm md:text-[15px] text-left px-4 py-1 text-black font-semibold line-clamp-3'>
 					{name}

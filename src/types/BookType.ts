@@ -65,6 +65,12 @@ export type ResultType = {
 			"X-RapidAPI-Host": string;
 		};
 	};
+	loggedIn: boolean;
+	setLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
+	showLogin: boolean;
+	setShowLogin: React.Dispatch<React.SetStateAction<boolean>>;
+	fullname: string;
+	setFullname: React.Dispatch<React.SetStateAction<string>>;
 };
 
 export type Genre = {

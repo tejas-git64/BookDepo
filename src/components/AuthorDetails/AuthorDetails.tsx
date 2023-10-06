@@ -14,6 +14,7 @@ export default function AuthorDetails(props: {
 	function close(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
 		e.preventDefault();
 		props.setIsRevealed(false);
+		setAuthorBio(null);
 	}
 
 	const url = `https://hapi-books.p.rapidapi.com/author/${props.authorId}`;
@@ -22,7 +23,7 @@ export default function AuthorDetails(props: {
 			const response = await fetch(url, AuthorContext?.options);
 			const readableStream = await response.text();
 			const result = JSON.parse(readableStream);
-			result.length > 0 && setAuthorBio(result);
+			result && setAuthorBio(result);
 			console.log(result);
 		} catch (error) {
 			console.error(error);
@@ -91,7 +92,11 @@ export default function AuthorDetails(props: {
 										/>
 									))
 								) : (
-									<p>Unable to fetch books</p>
+									<div className='w-full h-[30vh] rounded-3xl bg-neutral-50 grid place-items-center'>
+										<p className='font-semibold text-2xl'>
+											Could'nt find any books 🤷
+										</p>
+									</div>
 								)}
 							</ul>
 						</div>

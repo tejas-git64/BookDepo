@@ -27,7 +27,7 @@ export default function Books() {
 
 	useEffect(() => {
 		// getBooksByGenre();
-	}, [genre]);
+	}, []);
 
 	return (
 		<>
